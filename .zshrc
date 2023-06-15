@@ -78,7 +78,6 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git 
-	 fzf-tab
   	 tmux
 	 zsh-autosuggestions
 	 zsh-syntax-highlighting
@@ -110,6 +109,9 @@ tput cup $LINES
 # key shortcut
 bindkey -s "^L" 'clear && tmux clear-history ^M'
 
+# tool PATH
+source ~/.path.zsh
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -136,6 +138,7 @@ bindkey -s "^L" 'clear && tmux clear-history ^M'
 alias clear='tput reset && tput cup $LINES'
 alias mjy="exec zsh"
 alias funbrick="source /home/mjy/dotfiles/tmux.startup.sh"
+alias c='cgdb --args'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
