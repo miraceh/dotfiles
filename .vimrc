@@ -7,3 +7,6 @@ set incsearch
 set nowrapscan
 
 set scrolloff=999
+
+set runtimepath^=~/.fzf
+set runtimepath^=~/.vim/bundle/fzf.vim
